@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usaname:</strong>
+  <%= @user.usaname %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<% @user.addresses.each do |address| %>
+  <p>
+    <strong>Zipcode:</strong>
+    <%= address.zipcode %>
+  </p>
+  <p>
+    <strong>City:</strong>
+    <%= address.city %>
+  </p>
+  <p>
+    <strong>Street:</strong>
+    <%= address.street %>
+  </p>
+  <p>
+    <strong>Tel:</strong>
+    <%= address.tel %>
+  </p>
+<% end %> 
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
